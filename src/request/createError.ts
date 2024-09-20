@@ -7,7 +7,7 @@ import {
 
 export type AxiosErrorResponse = AxiosResponse | AxiosResponseError;
 
-class AxiosError extends Error {
+export class AxiosError extends Error {
   config: AxiosRequestConfig;
   request: AxiosAdapterPlatformTask;
   response: AxiosErrorResponse;
