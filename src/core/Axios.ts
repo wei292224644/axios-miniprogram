@@ -269,6 +269,9 @@ export interface AxiosResponse<
    * 请求任务
    */
   request?: AxiosAdapterPlatformTask;
+
+  success?: boolean
+  message?: string
 }
 
 /**
@@ -349,7 +352,7 @@ export interface AxiosDomainRequestHandler {
  * Axios 构造函数
  */
 export interface AxiosConstructor {
-  new (config: AxiosRequestConfig): Axios;
+  new(config: AxiosRequestConfig): Axios;
 }
 
 export default class Axios {

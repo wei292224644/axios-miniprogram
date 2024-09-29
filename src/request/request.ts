@@ -55,11 +55,13 @@ export function request(config: AxiosRequestConfig) {
       response.config = config;
       response.request = adapterTask;
 
+
       const { validateStatus } = config;
       if (!isFunction(validateStatus) || validateStatus(response.status)) {
         resolve(response);
       } else {
-        catchError('validate status error', response);
+        // catchError('validate status error', response);
+        resolve(response);
       }
     }
 
