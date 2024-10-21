@@ -81,7 +81,7 @@ export function request(config: AxiosRequestConfig) {
       message: string,
       errorResponse: AxiosErrorResponse,
     ): void {
-      reject(createError(message, config, errorResponse, adapterTask));
+      resolve(errorResponse);
     }
 
     if (isPlainObject(adapterTask)) {
